@@ -62,8 +62,6 @@ print(origin)
 print(destination)
 
 
-
-
 fmt = '%Y-%m-%d %H:%M'
 origin = origin.strftime(fmt)
 destination = destination.strftime(fmt)
@@ -72,7 +70,7 @@ d2 = datetime.strptime(destination, fmt)
 
 diff = d2 - d1
 
-diff_minutes = ((diff.days * 24 * 60) + (diff.seconds/60))/60
+diff_hours = ((diff.days * 24 * 60) + (diff.seconds/60))/60 # calculate the hours difference
 
 
-print('+' + str(diff_minutes))
+print('+' + str(diff_hours))
